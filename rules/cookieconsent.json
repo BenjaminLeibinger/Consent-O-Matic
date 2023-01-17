@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
+  "cookieconsent": {
+    "detectors": [
+      {
+        "presentMatcher": [
+          {
+            "type": "css",
+            "target": {
+              "selector": ".cc-window"
+            }
+          }
+        ],
+        "showingMatcher": [
+          {
+            "type": "css",
+            "target": {
+              "selector": ".cc-window"
+            }
+          }
+        ]
+      }
+    ],
+    "methods": [
+      {
+        "action": {
+          "type": "click",
+          "target": {
+            "selector": ".cc-ALLOW"
+          }
+        },
+        "name": "SAVE_CONSENT"
+      },
+      {
+        "name": "HIDE_CMP"
+      },
+      {
+        "name": "UTILITY"
+      },
+      {
+        "name": "OPEN_OPTIONS"
+      },
+      {
+        "action": {
+          "type": "click",
+          "target": {
+            "selector": ".cc-ALLOW"
+          }
+        },
+        "name": "DO_CONSENT"
+      }
+    ]
+  }
+}
