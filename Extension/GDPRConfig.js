@@ -316,3 +316,5 @@ GDPRConfig.defaultDebugFlags = {
 GDPRConfig.defaultRuleLists = [
     "https://raw.githubusercontent.com/BenjaminLeibinger/Consent-O-Matic/master/rules-list.json",
 ];
+
+GDPRConfig.defaultTimeout = 30

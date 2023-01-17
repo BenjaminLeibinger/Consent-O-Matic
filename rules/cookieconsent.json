@@ -26,16 +26,16 @@
         "action": {
           "type": "click",
           "target": {
-            "selector": "a.cc-ALLOW"
+            "selector": ".cc-ALLOW"
           }
         },
         "name": "SAVE_CONSENT"
       },
       {
         "action": {
-          "type": "click",
+          "type": "multiclick",
           "target": {
-            "selector": "a.cc-ALLOW"
+            "selector": ".cc-ALLOW"
           }
         },
         "name": "DO_CONSENT"

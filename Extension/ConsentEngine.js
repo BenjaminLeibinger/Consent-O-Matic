@@ -53,7 +53,7 @@ class ConsentEngine {
     static enforceScrollBehaviours(shouldEnforce) {
         //Make sure we enforce on parent if inside iframe
         let insideIframe = window !== window.parent;
-    
+
         if(insideIframe) {
             //find top most window
             let top = window.parent;
@@ -66,7 +66,7 @@ class ConsentEngine {
                 top.postMessage({"enforceScrollBehaviours": shouldEnforce}, url);
             });
         }
-    
+
         let stylesheetElement = document.querySelector("#consent-scrollbehaviour-override");
         if (stylesheetElement) {
             stylesheetElement.textContent = "";
@@ -144,7 +144,7 @@ class ConsentEngine {
 
         this.stopEngineId = setTimeout(() => {
             if (ConsentEngine.debugValues.debugLog) {
-                console.log("No CMP detected in 5 seconds, stopping engine...");
+                console.log("No CMP detected in "+ GDPRConfig.defaultTimeout +" seconds, stopping engine...");
             }
 
             if(self.queueId != null) {
@@ -157,7 +157,7 @@ class ConsentEngine {
                 handled: false
             });
             this.stopObserver();
-        }, 5000);
+        }, GDPRConfig.defaultTimeout * 1000);
     }
 
     async handleMutations(mutations) {
