@@ -26,25 +26,16 @@
         "action": {
           "type": "click",
           "target": {
-            "selector": ".cc-ALLOW"
+            "selector": "a.cc-ALLOW"
           }
         },
         "name": "SAVE_CONSENT"
       },
       {
-        "name": "HIDE_CMP"
-      },
-      {
-        "name": "UTILITY"
-      },
-      {
-        "name": "OPEN_OPTIONS"
-      },
-      {
         "action": {
           "type": "click",
           "target": {
-            "selector": ".cc-ALLOW"
+            "selector": "a.cc-ALLOW"
           }
         },
         "name": "DO_CONSENT"
