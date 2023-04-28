@@ -216,7 +216,7 @@ class ConsentEngine {
             this.triedCMPs.add(cmp.name);
 
             //Check if popup shows, then do consent stuff
-            let numberOfTries = 10;
+            let numberOfTries = 5;
             async function checkIsShowing() {
                 if (cmp.isShowing()) {
                     self.currentCMP = cmp;
@@ -238,6 +238,8 @@ class ConsentEngine {
                                     cmp.stopObservers();
                                 }
                             }
+
+                            self.checkRunning = false;
 
                             self.startObserver();
                             self.handleMutations([]);
@@ -332,6 +334,8 @@ class ConsentEngine {
                             }
                             clearTimeout(self.stopEngineId);
                             clearInterval(self.domScannerIntervalID);
+
+                            self.checkRunning = false;
                         }
                     }, 0);
                 } else {
@@ -343,6 +347,7 @@ class ConsentEngine {
                             console.groupEnd();
                             console.log(cmp.name + " - Not showing");
                         }
+                        self.checkRunning = false;
                         self.startObserver();
                         self.startStopTimeout()
                         self.handleMutations([]);
@@ -351,9 +356,9 @@ class ConsentEngine {
             }
 
             await checkIsShowing();
+        } else {
+            self.checkRunning = false;
         }
-
-        self.checkRunning = false;
     }
 
     unHideAll() {

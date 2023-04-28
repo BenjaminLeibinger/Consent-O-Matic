@@ -83,7 +83,8 @@
                                     "textFilter": [
                                         "Tilpassede annoncer og tilpasset indhold, annonce- og indholdsmåling, målgruppeindsigter og produktudvikling",
                                         "Personalised ads and content, ad and content measurement, audience insights and product development",
-                                        "Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessung, Erkenntnisse über Zielgruppen und Produktentwicklung"
+                                        "Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessung, Erkenntnisse über Zielgruppen und Produktentwicklung",
+                                        "Personalised ads, and ad measurement"
                                     ]
                                 },
                                 "trueAction": {
@@ -208,7 +209,8 @@
                                     "textFilter": [
                                         "Funktionelle cookies",
                                         "Functional Cookies",
-                                        "Funktionale Cookies"
+                                        "Funktionale Cookies",
+                                        "Funktionelle"
                                     ]
                                 },
                                 "trueAction": {
@@ -238,7 +240,8 @@
                                     "selector": ".ot-grp-hdr1, .group-toggle",
                                     "textFilter": [
                                         "Personlig tilpasning cookies",
-                                        "Personalisation Cookies"
+                                        "Personalisation Cookies",
+                                        "Personalised content, content measurement, audience insights, and product development"
                                     ]
                                 },
                                 "trueAction": {
@@ -268,7 +271,8 @@
                                     "selector": ".ot-grp-hdr1, .group-toggle",
                                     "textFilter": [
                                         "Målrettede cookies",
-                                        "Targeting cookies"
+                                        "Targeting cookies",
+                                        "Målrettede"
                                     ]
                                 },
                                 "trueAction": {
@@ -297,7 +301,8 @@
                                 "target": {
                                     "selector": ".ot-grp-hdr1, .group-toggle",
                                     "textFilter": [
-                                        "Site monitoring cookies"
+                                        "Site monitoring cookies",
+                                        "Performance"
                                     ]
                                 },
                                 "trueAction": {
@@ -326,7 +331,8 @@
                                 "target": {
                                     "selector": ".ot-grp-hdr1, .group-toggle",
                                     "textFilter": [
-                                        "Third-party privacy enhanced cookies"
+                                        "Third-party privacy enhanced cookies",
+                                        "Sociale medier"
                                     ]
                                 },
                                 "trueAction": {
