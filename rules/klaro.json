@@ -1,21 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
-    "iubuenda": {
+    "klaro": {
         "detectors": [
             {
                 "presentMatcher": [
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#iubenda-cs-banner"
-                        }
-                    }
-                ],
-                "showingMatcher": [
-                    {
-                        "type": "css",
-                        "target": {
-                            "selector": ".iubenda-cs-customize-btn"
+                            "selector": "#klaro"
                         }
                     }
                 ]
@@ -26,28 +18,14 @@
                 "action": {
                     "type": "list",
                     "actions": [
+                        
                         {
-                            "type": "hide",
+                            "type": "click",
                             "target": {
-                                "selector": "#iubenda-cs-banner"
-                            }
-                        },
-                        {
-                            "type": "hide",
-                            "target": {
-                                "selector": "#iubenda-iframe"
+                                "selector": ".cn-learn-more"
                             }
                         }
                     ]
-                },
-                "name": "HIDE_CMP"
-            },
-            {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "#iubenda-cs-banner .iubenda-cs-customize-btn"
-                    }
                 },
                 "name": "OPEN_OPTIONS"
             },
@@ -58,44 +36,15 @@
                         {
                             "type": "foreach",
                             "target": {
-                                "selector": ".purposes-item"
-                            },
-                            "action": {
-                                "type": "consent",
-                                "consents": [
-                                    {
-                                        "matcher": {
-                                            "type": "checkbox",
-                                            "target": {
-                                                "selector": "input"
-                                            }
-                                        },
-                                        "toggleAction": {
-                                            "type": "click",
-                                            "target": {
-                                                "selector": "input"
-                                            }
-                                        },
-                                        "type": "X"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "foreach",
-                            "target": {
                                 "childFilter": {
                                     "target": {
                                         "selector": "label",
                                         "textFilter": [
-                                            "Basic interactions & functionalities",
-                                            "Interazioni e funzionalità semplici",
-                                            "Functionality",
-                                            "Funzionalità"
+                                            "Necessari"
                                         ]
                                     }
                                 },
-                                "selector": ".purposes-item"
+                                "selector": "li.cm-purpose"
                             },
                             "action": {
                                 "type": "consent",
@@ -104,13 +53,13 @@
                                         "matcher": {
                                             "type": "checkbox",
                                             "target": {
-                                                "selector": "input"
+                                                "selector": "input[id*=purpose-item-necessari]"
                                             }
                                         },
                                         "toggleAction": {
                                             "type": "click",
                                             "target": {
-                                                "selector": "input"
+                                                "selector": "input[id*=purpose-item-necessari]"
                                             }
                                         },
                                         "type": "A"
@@ -125,51 +74,11 @@
                                     "target": {
                                         "selector": "label",
                                         "textFilter": [
-                                            "Experience enhancement",
-                                            "Miglioramento dell’esperienza",
-                                            "Experience",
-                                            "Expérience",
-                                            "Esperienza"
+                                            "Analitici"
                                         ]
                                     }
                                 },
-                                "selector": ".purposes-item"
-                            },
-                            "action": {
-                                "type": "consent",
-                                "consents": [
-                                    {
-                                        "matcher": {
-                                            "type": "checkbox",
-                                            "target": {
-                                                "selector": "input"
-                                            }
-                                        },
-                                        "toggleAction": {
-                                            "type": "click",
-                                            "target": {
-                                                "selector": "input"
-                                            }
-                                        },
-                                        "type": "E"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "foreach",
-                            "target": {
-                                "childFilter": {
-                                    "target": {
-                                        "selector": "label",
-                                        "textFilter": [
-                                            "Measurement",
-                                            "Misurazione",
-                                            "Mesure"
-                                        ]
-                                    }
-                                },
-                                "selector": ".purposes-item"
+                                "selector": "li.cm-purpose"
                             },
                             "action": {
                                 "type": "consent",
@@ -199,13 +108,11 @@
                                     "target": {
                                         "selector": "label",
                                         "textFilter": [
-                                            "Targeting & Advertising",
-                                            "Targeting e Pubblicità",
-                                            "Marketing"
+                                            "Analitici di terze parti"
                                         ]
                                     }
                                 },
-                                "selector": ".purposes-item"
+                                "selector": "li.cm-purpose"
                             },
                             "action": {
                                 "type": "consent",
@@ -227,6 +134,40 @@
                                     }
                                 ]
                             }
+                        },
+                        {
+                            "type": "foreach",
+                            "target": {
+                                "childFilter": {
+                                    "target": {
+                                        "selector": "label",
+                                        "textFilter": [
+                                            "Altri"
+                                        ]
+                                    }
+                                },
+                                "selector": "li.cm-purpose"
+                            },
+                            "action": {
+                                "type": "consent",
+                                "consents": [
+                                    {
+                                        "matcher": {
+                                            "type": "checkbox",
+                                            "target": {
+                                                "selector": "input"
+                                            }
+                                        },
+                                        "toggleAction": {
+                                            "type": "click",
+                                            "target": {
+                                                "selector": "input"
+                                            }
+                                        },
+                                        "type": "X"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 },
@@ -234,12 +175,46 @@
             },
             {
                 "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "#iubFooterBtn"
-                    }
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "ifcss",
+                            "target": {
+                                "selector": ".cm-btn-accept",
+                                "textFilter": [
+                                    "Accetta i selezionati"
+                                ]
+                            },
+                            "trueAction": {
+                                "type": "click",
+                                "target": {
+                                    "selector": ".cm-btn-accept"
+                                }
+                            },
+                            "falseAction": {
+                                "type": "click",
+                                "target": {
+                                    "selector": ".cm-btn-accept"
+                                }
+                            }
+                        }
+                    ]
                 },
                 "name": "SAVE_CONSENT"
+            },
+            {
+                "action": {
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "hide",
+                            "target": {
+                                "selector": "#klaro"
+                            }
+                        }
+                    ]
+                },
+                "name": "HIDE_CMP"
             },
             {
                 "name": "UTILITY"

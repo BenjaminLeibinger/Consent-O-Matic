@@ -89,7 +89,9 @@
                                                 "Udvid funktionalitet",
                                                 "Extend functionality",
                                                 "Præferencer",
-                                                "Functional"
+                                                "Functional",
+                                                "Cookie funzionali",
+                                                "Cookie di funzionalità"
                                             ]
                                         },
                                         "trueAction": {
@@ -131,7 +133,8 @@
                                                 "PUBLICIDAD",
                                                 "PUBBLICITÀ",
                                                 "REKLAMY",
-                                                "RECLAME"
+                                                "RECLAME",
+                                                "Cookie di targeting"
                                             ]
                                         },
                                         "trueAction": {
@@ -171,7 +174,9 @@
                                                 "ANALISI",
                                                 "ANALITYKA",
                                                 "Performance Technologies",
-                                                "Audience Measurement"
+                                                "Audience Measurement",
+                                                "Cookie di prestazione",
+                                                "Analizzare il pubblico e le performance dei contenuti"
                                             ]
                                         },
                                         "trueAction": {
@@ -204,7 +209,8 @@
                                                 "Opbevare og/eller tilgå oplysninger på en enhed",
                                                 "Informationen auf einem Gerät speichern und/oder abrufen",
                                                 "Præcise geoplaceringsoplysninger og identifikation gennem enhedsscanning",
-                                                "Specielle formål"
+                                                "Specielle formål",
+                                                "Archiviare e/o accedere a informazioni su un dispositivo"
                                             ]
                                         },
                                         "trueAction": {
@@ -237,7 +243,8 @@
                                                 "Tilpassede annoncer og tilpasset indhold, annonce- og indholdsmåling, målgruppeindsigter og produktudvikling",
                                                 "Tilpasse annoncer og tilpasset indhold, annonce- og indholdsmåling, målgruppeindsigter og produktudvikling",
                                                 "Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessung, Erkenntnisse über Zielgruppen und Produktentwicklung",
-                                                "Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessungen, Erkenntnisse über Zielgruppen und Produktentwicklungen"
+                                                "Personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessungen, Erkenntnisse über Zielgruppen und Produktentwicklungen",
+                                                "Annunci e contenuti personalizzati, valutazione degli annunci e del contenuto, osservazioni del pubblico e sviluppo di prodotti"
                                             ]
                                         },
                                         "trueAction": {
@@ -268,7 +275,8 @@
                                             "textFilter": [
                                                 "Use precise geolocation data",
                                                 "Bruge præcise geoplaceringsoplysninger",
-                                                "Genaue Standortdaten verwenden"
+                                                "Genaue Standortdaten verwenden",
+                                                "Utilizzare dati di geolocalizzazione precisi"
                                             ]
                                         },
                                         "trueAction": {
@@ -299,7 +307,8 @@
                                             "textFilter": [
                                                 "Actively scan device characteristics for identification",
                                                 "Aktivt scanne enhedskarakteristika til identifikation",
-                                                "Geräteeigenschaften zur Identifikation aktiv abfragen"
+                                                "Geräteeigenschaften zur Identifikation aktiv abfragen",
+                                                "Scansione attiva delle caratteristiche del dispositivo ai fini dell’identificazione"
                                             ]
                                         },
                                         "trueAction": {
@@ -336,7 +345,9 @@
                                                 "REDES SOCIALES",
                                                 "RÉSEAUX SOCIAUX",
                                                 "Informasjonskapsler for sosiale medier",
-                                                "SOCIALE MEDIA"
+                                                "SOCIALE MEDIA",
+                                                "Personalizzare navigazione e contenuti",
+                                                "Altri cookie non tecnici (non standard IAB)"
                                             ]
                                         },
                                         "trueAction": {
