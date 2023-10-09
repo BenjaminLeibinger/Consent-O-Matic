@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
-    "hetzner": {
+    "ecdceuropa": {
         "detectors": [
             {
                 "presentMatcher": [
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#CookieConsent .modal-content .modal-header"
+                            "selector": "#cckBanner"
                         }
                     }
                 ],
@@ -15,7 +15,7 @@
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#CookieConsent",
+                            "selector": "#cckBanner",
                             "displayFilter": true
                         }
                     }
@@ -30,16 +30,24 @@
                 "name": "OPEN_OPTIONS"
             },
             {
+                "action": {
+                    "type": "ifallowall",
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "#cckAcceptCookies"
+                        }
+                    },
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": "#cckRefuseCookies.cckBannerVisible"
+                        }
+                    }
+                },
                 "name": "DO_CONSENT"
             },
             {
-                "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "#CookieConsentDeclined",
-                        "displayFilter": true
-                    }
-                },
                 "name": "SAVE_CONSENT"
             },
             {

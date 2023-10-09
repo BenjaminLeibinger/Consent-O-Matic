@@ -1,21 +1,22 @@
 {
     "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
-    "hetzner": {
+    "fashionunited": {
         "detectors": [
             {
                 "presentMatcher": [
                     {
-                        "type": "css",
-                        "target": {
-                            "selector": "#CookieConsent .modal-content .modal-header"
-                        }
+                        "type": "url",
+                        "url": [
+                            ".*fashionunited\\W.*"
+                        ],
+                        "regexp": true
                     }
                 ],
                 "showingMatcher": [
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#CookieConsent",
+                            "selector": ".MuiDialog-container",
                             "displayFilter": true
                         }
                     }
@@ -34,10 +35,18 @@
             },
             {
                 "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": "#CookieConsentDeclined",
-                        "displayFilter": true
+                    "type": "ifallowall",
+                    "trueAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": ".MuiButton-contained.e1tbbfa82"
+                        }
+                    },
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": ".MuiButton-outlined.e1tbbfa82"
+                        }
                     }
                 },
                 "name": "SAVE_CONSENT"

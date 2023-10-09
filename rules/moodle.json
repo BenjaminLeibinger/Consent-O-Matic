@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
-    "hetzner": {
+    "moodle": {
         "detectors": [
             {
                 "presentMatcher": [
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#CookieConsent .modal-content .modal-header"
+                            "selector": ".eupopup-container"
                         }
                     }
                 ],
@@ -15,8 +15,7 @@
                     {
                         "type": "css",
                         "target": {
-                            "selector": "#CookieConsent",
-                            "displayFilter": true
+                            "selector": ".eupopup-container"
                         }
                     }
                 ]
@@ -36,8 +35,7 @@
                 "action": {
                     "type": "click",
                     "target": {
-                        "selector": "#CookieConsentDeclined",
-                        "displayFilter": true
+                        "selector": ".eupopup-button"
                     }
                 },
                 "name": "SAVE_CONSENT"

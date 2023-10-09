@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
-    "kk.dk": {
+    "schibsted": {
         "detectors": [
             {
                 "presentMatcher": [
                     {
                         "type": "css",
                         "target": {
-                            "selector": ".eu-cookie-compliance-banner"
+                            "selector": ".BannerTextCookieBanner"
                         }
                     }
                 ],
@@ -15,8 +15,7 @@
                     {
                         "type": "css",
                         "target": {
-                            "selector": ".eu-cookie-compliance-banner",
-                            "displayFilter": true
+                            "selector": ".OutlineButtonCookieBanner"
                         }
                     }
                 ]
@@ -24,15 +23,21 @@
         ],
         "methods": [
             {
-                "action": {
-                    "type": "hide",
-                    "target": {
-                        "selector": "#sliding-popup"
-                    }
-                },
                 "name": "HIDE_CMP"
             },
             {
+                "action": {
+                    "type": "ifcss",
+                    "target": {
+                        "selector": "div[class^=TrackingSetting]"
+                    },
+                    "falseAction": {
+                        "type": "click",
+                        "target": {
+                            "selector": ".OutlineButtonCookieBanner"
+                        }
+                    }
+                },
                 "name": "OPEN_OPTIONS"
             },
             {
@@ -46,76 +51,61 @@
                                     "matcher": {
                                         "type": "checkbox",
                                         "target": {
-                                            "selector": "#cookie-category-functional"
+                                            "selector": "#personalization"
                                         }
                                     },
                                     "toggleAction": {
                                         "type": "click",
                                         "target": {
-                                            "selector": "#cookie-category-functional"
+                                            "selector": "#personalization"
                                         }
                                     },
-                                    "type": "A"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "consent",
-                            "consents": [
+                                    "type": "E"
+                                },
                                 {
                                     "matcher": {
                                         "type": "checkbox",
                                         "target": {
-                                            "selector": "#cookie-category-statistics"
+                                            "selector": "#behavior_tracking_improvement"
                                         }
                                     },
                                     "toggleAction": {
                                         "type": "click",
                                         "target": {
-                                            "selector": "#cookie-category-statistics"
+                                            "selector": "#behavior_tracking_improvement"
                                         }
                                     },
                                     "type": "B"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "consent",
-                            "consents": [
+                                },
                                 {
                                     "matcher": {
                                         "type": "checkbox",
                                         "target": {
-                                            "selector": "#cookie-category-analytics"
+                                            "selector": "#behavior_tracking_surveys"
                                         }
                                     },
                                     "toggleAction": {
                                         "type": "click",
                                         "target": {
-                                            "selector": "#cookie-category-analytics"
+                                            "selector": "#behavior_tracking_surveys"
                                         }
                                     },
                                     "type": "B"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "consent",
-                            "consents": [
+                                },
                                 {
                                     "matcher": {
                                         "type": "checkbox",
                                         "target": {
-                                            "selector": "#cookie-category-social"
+                                            "selector": "#behavior_tracking_marketing"
                                         }
                                     },
                                     "toggleAction": {
                                         "type": "click",
                                         "target": {
-                                            "selector": "#cookie-category-social"
+                                            "selector": "#behavior_tracking_marketing"
                                         }
                                     },
-                                    "type": "X"
+                                    "type": "F"
                                 }
                             ]
                         }
@@ -125,10 +115,21 @@
             },
             {
                 "action": {
-                    "type": "click",
-                    "target": {
-                        "selector": ".eu-cookie-compliance-save-preferences-button"
-                    }
+                    "type": "list",
+                    "actions": [
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": ".Button-sc-1vyuy3x-0.hvTFjr"
+                            }
+                        },
+                        {
+                            "type": "click",
+                            "target": {
+                                "selector": ".LogoLink-sc-37ij6x-11.bpPbwv"
+                            }
+                        }
+                    ]
                 },
                 "name": "SAVE_CONSENT"
             },
