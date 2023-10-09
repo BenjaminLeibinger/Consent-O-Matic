@@ -1,7 +1,7 @@
 {
   "references": [
-    "https://github.com/BenjaminLeibinger/Consent-O-Matic/blob/master/rules/banggood.json",
-    "https://github.com/BenjaminLeibinger/Consent-O-Matic/blob/master/rules/cookieconsent.json",
+    "https://raw.githubusercontent.com/BenjaminLeibinger/Consent-O-Matic/master/rules/banggood.json",
+    "https://raw.githubusercontent.com/BenjaminLeibinger/Consent-O-Matic/master/rules/cookieconsent.json",
     "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules/asus.json",
     "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules/allekringloopwinkels.json",
     "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules/airbnb.json",
