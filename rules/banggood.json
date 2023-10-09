@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
+  "banggood": {
+    "detectors": [
+      {
+        "presentMatcher": [
+          {
+            "type": "css",
+            "target": {
+              "selector": ".modal.modal-cookie"
+            }
+          }
+        ],
+        "showingMatcher": [
+          {
+            "type": "css",
+            "target": {
+              "selector": ".modal.modal-cookie"
+            }
+          }
+        ]
+      }
+    ],
+    "methods": [
+      {
+        "action": {
+          "type": "click",
+          "target": {
+            "selector": ".modal.modal-cookie > div > button.confirm"
+          },
+          "parent": {
+            "selector": ""
+          }
+        },
+        "name": "DO_CONSENT"
+      }
+    ]
+  }
+}
