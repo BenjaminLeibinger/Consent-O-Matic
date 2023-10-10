@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 const STATUS = {
     "INIT": 0,
@@ -96,7 +96,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, reply) {
 
             GDPRConfig.getStatistics().then((entries)=>{
                 entries.clicks += json.clicks;
-                
+
                 if (!entries.cmps.hasOwnProperty(json.cmp)){
                     entries.cmps[json.cmp] = {
                         filledForms: 0,
@@ -135,11 +135,11 @@ function fetchRules(forceUpdate) {
     let rulePromise = new Promise((resolve, reject) => {
         GDPRConfig.getRuleLists().then((ruleLists) => {
 
-            let oldDefaultListIndex = ruleLists.indexOf("https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/Rules.json");
+            let oldDefaultListIndex = ruleLists.indexOf("https://raw.githubusercontent.com/BenjaminLeibinger/Consent-O-Matic/master/Rules.json");
 
             if(oldDefaultListIndex !== -1) {
                 console.log("Cleaning old rule list, and replacing with new reference based list...");
-                ruleLists[oldDefaultListIndex] = "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules-list.json"
+                ruleLists[oldDefaultListIndex] = "https://raw.githubusercontent.com/BenjaminLeibinger/Consent-O-Matic/master/rules-list.json"
                 GDPRConfig.setRuleLists(ruleLists);
             }
 
