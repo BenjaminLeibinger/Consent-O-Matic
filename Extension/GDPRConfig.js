@@ -312,7 +312,7 @@ GDPRConfig.defaultDebugFlags = {
     "debugClicks": false,
     "alwaysForceRulesUpdate": false,
     "skipHideMethod": false,
-    "debugLog": true,
+    "debugLog": false,
     "debugTranslations": false,
     "skipSubmitConfirmation": false,
     "dontHideProgressDialog": false,
